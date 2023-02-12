@@ -1,9 +1,8 @@
 import { ADD_TO_CART } from "../actionTypes/actionTypes";
 
 const cartCounter = (store) => (next) => (action) => {
-    const state = store.getState();
-
-    const cart = state.product.cart;
+    const state = store.getState(); // get current state
+    const cart = state.product.cart; //get current cart
 
     if(action.type === ADD_TO_CART){
         const newAction = {
